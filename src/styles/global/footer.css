@@ -1,0 +1,22 @@
+.footer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.footer img {
+    width: 80px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.footer a:hover {
+    color: var(--background-color);
+}

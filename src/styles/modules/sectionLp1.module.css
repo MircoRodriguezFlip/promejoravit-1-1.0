@@ -1,0 +1,21 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.sectionTitulo {
+    color: var(--secondary-color);
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+.sectionTitulo h1 {
+    font-size: 24px;
+}
+
+.sectionContenido img {
+    width: 300px;
+}
