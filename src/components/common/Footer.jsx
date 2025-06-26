@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="footer light-text">
             <NavLink to="/" aria-label="Ir a la página de inicio">
-                <img src={logoFooter} alt="Logotipo de Proconsultores" />
+                <img src={logoFooter} alt="Logotipo de Mejoravit" />
             </NavLink>
 
             <NavLink to="/politica-privacidad" title="Ver la política de privacidad">

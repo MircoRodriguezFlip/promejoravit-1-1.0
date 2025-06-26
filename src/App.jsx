@@ -10,7 +10,7 @@ const LandingPage = lazy(() => import('./components/pages/LandingPage'));
 
 function App() {
     return (
-        <BrowserRouter basename="/mejoravit-3-1.0">
+        <BrowserRouter basename="/promejoravit-1-1.0">
             <ScrollToTop />
 
             <NavBar />
