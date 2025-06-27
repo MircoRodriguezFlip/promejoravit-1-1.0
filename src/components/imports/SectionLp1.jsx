@@ -1,5 +1,4 @@
 import styles from '../../styles/modules/sectionLp1.module.css';
-
 import img1Section from '../../assets/images/img-section-lp-1.webp';
 
 import { BotonNav } from '../utils/BotonNav';
@@ -16,7 +15,7 @@ export const SectionLp1 = () => {
             </header>
 
             <div className={styles.sectionContenido}>
-                <img src={img1Section} alt="Ejecutiva de Mejoravit" />
+                <img src={img1Section} alt="Ejecutiva de Mejoravit presentando las ganancias del crédito" />
 
                 <div className={styles.contenido1}>
                     <BotonNav dataCta="home-btn-1" />
@@ -29,7 +28,7 @@ export const SectionLp1 = () => {
                 </div>
             </div>
 
-            {/* Fondo animado */}
+            {/* FONDO ANIMADO */}
             <div className={`${styles.bg} ${styles.bg1}`}></div>
         </section>
     );
