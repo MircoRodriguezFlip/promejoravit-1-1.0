@@ -19,6 +19,7 @@
     min-height: 100dvh;
     padding: 20px 0px;
     padding-top: 80px;
+    background-color: var(--background-color);
 }
 
 .sectionTitulo {

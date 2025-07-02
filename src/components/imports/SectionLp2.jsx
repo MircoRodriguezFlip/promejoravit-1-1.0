@@ -33,9 +33,6 @@ export const SectionLp2 = () => {
                     />
                 )}
             </div>
-
-            {/* FONDO  */}
-            <div className={styles.bg}></div>
         </section>
     );
 };
