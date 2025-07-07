@@ -1,0 +1,131 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--tertiary-color);
+    min-height: calc(100dvh - 80px);
+    padding: 20px;
+}
+
+.primerContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 320px;
+}
+
+.preguntas h2 {
+    color: var(--text-color-2);
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.icon {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.sectionContainer img {
+    filter: drop-shadow(0px 0px 50px var(--secondary-color));
+    margin-bottom: -20px;
+    width: 280px;
+}
+
+@media (min-width: 576px) {
+    .preguntas {
+        width: 490px;
+    }
+}
+
+@media (min-width: 768px) {
+    .primerContenido {
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    .preguntas {
+        width: 320px;
+    }
+
+    .preguntas h2 {
+        margin-bottom: 20px;
+    }
+
+    .sectionContainer img {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .preguntas {
+        width: 420px;
+    }
+
+    .preguntas h2 {
+        font-size: 32px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    .iconContainer p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .primerContenido {
+        gap: 20px;
+    }
+
+    .preguntas {
+        width: 550px;
+    }
+
+    .preguntas h2 {
+        font-size: 44px;
+    }
+
+    .sectionContainer img {
+        width: 450px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .primerContenido {
+        gap: 20px;
+    }
+
+    .preguntas {
+        width: 670px;
+    }
+
+    .preguntas h2 {
+        font-size: 54px;
+    }
+
+    .iconContainer p {
+        font-size: 22px;
+    }
+
+    .sectionContainer img {
+        width: 600px;
+    }
+}
