@@ -92,7 +92,7 @@ export const BurgerMenu = () => {
                                         );
                                     } else {
                                         return (
-                                            <NavLink to={link.to} onClick={toggleMenu} title={link.title}>
+                                            <NavLink to={link.to} onClick={toggleMenu} title={link.title} data-link={link.dataLink}>
                                                 {link.label}
                                             </NavLink>
                                         );

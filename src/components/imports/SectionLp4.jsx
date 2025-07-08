@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/sectionLp4.module.css';
 
-import img1Section from '../../assets/images/img-section-lp-4.png';
+import img1Section from '../../assets/images/img-section-lp-4.webp';
 import { iconosSectionLp4 } from '../utils/iconosSectionLp4';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

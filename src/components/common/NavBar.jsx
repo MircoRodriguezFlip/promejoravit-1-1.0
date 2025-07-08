@@ -36,15 +36,25 @@ export const NavBar = () => {
         }
     };
 
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        setActiveLink(navLinks[0].id);
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+        }
+    };
+
     return (
         <header>
             <nav className="navbar" aria-label="Barra de navegación principal">
                 {/* LOGO */}
 
                 <div className="logo-container">
-                    <NavLink to="/" aria-label="Ir a la página principal" data-link="navbar-logo-btn">
+                    <a href="/" aria-label="Ir a la página principal" data-link="navbar-logo-btn" onClick={handleLogoClick}>
                         <img src={LogoNavbar} alt="Logotipo de Mejoravit en la barra de navegación" className="logo-navbar" />
-                    </NavLink>
+                    </a>
                 </div>
 
                 {/* LISTA  */}

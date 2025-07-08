@@ -1,15 +1,27 @@
-import logoFooter from '../../assets/images/logo-navbar.webp';
+import logoFooter from '../../assets/images/logo-footer.webp';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+        }
+    };
+
     return (
         <footer className="footer light-text">
-            <NavLink to="/" aria-label="Ir a la página de inicio">
+            <a href="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
                 <img src={logoFooter} alt="Logotipo de Mejoravit" />
-            </NavLink>
+            </a>
 
-            <NavLink to="/politica-privacidad" title="Ver la política de privacidad">
+            <NavLink to="/politica-privacidad" title="Ver la política de privacidad" data-link="footer-politica-link">
                 Política de privacidad
             </NavLink>
         </footer>

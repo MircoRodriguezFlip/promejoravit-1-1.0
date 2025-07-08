@@ -1,0 +1,138 @@
+.sectionContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-3);
+    z-index: 2;
+    padding: 20px;
+}
+
+.sectionTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTitulo h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.sectionTitulo h2:nth-of-type(1) {
+    margin-top: -20px;
+    font-size: 80px;
+}
+
+.sectionTitulo h3 {
+    text-align: center;
+    color: var(--text-color);
+    width: 320px;
+    font-size: 18px;
+}
+
+.sectionTitulo h3:nth-of-type(1) {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.sectionContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sectionContenido img {
+    filter: drop-shadow(0px 0px 50px var(--secondary-color));
+    width: 150px;
+}
+
+@media (min-width: 768px) {
+    .sectionContainer {
+        flex-direction: row;
+        padding-bottom: 40px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 24px;
+    }
+
+    .sectionTitulo h2:nth-of-type(1) {
+        margin-top: 0px;
+        font-size: 100px;
+    }
+
+    .sectionTitulo h3 {
+        width: 360px;
+        font-size: 20px;
+    }
+
+    .sectionTitulo h3:nth-of-type(1) {
+        font-size: 36px;
+    }
+
+    .sectionContenido img {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sectionContainer {
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionContainer {
+        gap: 80px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 28px;
+    }
+
+    .sectionTitulo h2:nth-of-type(1) {
+        font-size: 120px;
+    }
+
+    .sectionTitulo h3 {
+        width: 400px;
+        font-size: 22px;
+    }
+
+    .sectionTitulo h3:nth-of-type(1) {
+        font-size: 40px;
+    }
+
+    .sectionContenido img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionContainer {
+        gap: 80px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 52px;
+    }
+
+    .sectionTitulo h3 {
+        width: 600px;
+        font-size: 34px;
+    }
+
+    .sectionTitulo h3:nth-of-type(1) {
+        font-size: 60px;
+    }
+
+    .sectionContenido img {
+        width: 350px;
+    }
+}
