@@ -9,6 +9,7 @@
 }
 
 .primerContenido {
+    user-select: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +43,8 @@
 }
 
 .sectionContainer img {
+    user-select: none;
+    pointer-events: none;
     filter: drop-shadow(0px 0px 50px var(--secondary-color));
     margin-bottom: -20px;
     width: 280px;

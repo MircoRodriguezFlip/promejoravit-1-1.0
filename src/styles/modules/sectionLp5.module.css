@@ -10,6 +10,7 @@
 }
 
 .sectionTitulo {
+    user-select: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +49,8 @@
 }
 
 .sectionContenido img {
+    user-select: none;
+    pointer-events: none;
     filter: drop-shadow(0px 0px 50px var(--secondary-color));
     width: 150px;
 }

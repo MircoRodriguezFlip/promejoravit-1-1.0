@@ -11,6 +11,7 @@
 }
 
 .sectionTitulo {
+    user-select: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +27,8 @@
 }
 
 .sectionContenido {
+    user-select: none;
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: center;

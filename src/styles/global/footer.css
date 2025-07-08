@@ -9,11 +9,14 @@
 }
 
 .footer img {
+    user-select: none;
+    pointer-events: none;
     width: 100px;
     margin-bottom: 10px;
 }
 
 .footer a {
+    user-select: none;
     text-decoration: none;
     color: var(--primary-color);
 }
