@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.proconsultores.com.mx/sitemap.xml
+Sitemap: https://www.creditosoloparati.com.mx/sitemap.xml
