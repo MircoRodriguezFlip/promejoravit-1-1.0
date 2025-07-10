@@ -25,9 +25,7 @@ const LandingPage = () => {
 
     return (
         <main>
-            <section>
-                <SectionLp1 />
-            </section>
+            <SectionLp1 />
 
             <section id="registro">
                 <SectionLp2 />
@@ -41,9 +39,7 @@ const LandingPage = () => {
                 <SectionLp4 />
             </section>
 
-            <section>
-                <SectionLp5 />
-            </section>
+            <SectionLp5 />
         </main>
     );
 };
