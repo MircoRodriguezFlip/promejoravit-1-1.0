@@ -27,9 +27,10 @@ export const BotonNav = ({
                     behavior: 'smooth',
                 });
             }
+        } else if (esAncla) {
+            navigate(`/#${idDestino}`);
         } else {
-            sessionStorage.setItem('scrollToId', idDestino);
-            navigate('/');
+            navigate(to);
         }
     };
 

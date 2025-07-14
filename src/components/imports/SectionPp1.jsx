@@ -3,7 +3,7 @@ import styles from '../../styles/modules/politicasPage.module.css';
 import { NavLink } from 'react-router-dom';
 
 const MEJORAVIT_LINK = (
-    <NavLink to="/" title="ir a creditosoloparati.com.mx">
+    <NavLink to="/" title="ir a creditosoloparati.com.mx" data-link="politicas-home-link">
         creditosoloparati
     </NavLink>
 );
