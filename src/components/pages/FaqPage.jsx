@@ -1,3 +1,5 @@
+import { TitleSEO } from '../utils/TitleSEO';
+
 import styles from '../../styles/modules/faqPage.module.css';
 
 import { getFaqStructuredData } from '../utils/getFaqStructuredData';
@@ -42,6 +44,12 @@ const replaceWithJSX = (text, faqId) => {
 const FaqPage = () => {
     return (
         <main>
+            <TitleSEO
+                title="Mejoravit | FAQ"
+                description="Encuentra respuestas claras y rápidas a las dudas más comunes sobre el Crédito Mejoravit 2025."
+                canonical="https://creditosoloparati.com.mx/faq"
+            />
+
             <HelmetProvider>
                 <script type="application/ld+json">{JSON.stringify(faqStructuredData)}</script>
             </HelmetProvider>

@@ -12,7 +12,7 @@ const FaqPage = lazy(() => import('./components/pages/FaqPage'));
 
 function App() {
     return (
-        <BrowserRouter basename="/promejoravit-1-1.0">
+        <BrowserRouter>
             <ScrollToTop />
 
             <NavBar />

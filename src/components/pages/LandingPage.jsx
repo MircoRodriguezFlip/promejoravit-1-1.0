@@ -1,3 +1,5 @@
+import { TitleSEO } from '../utils/TitleSEO';
+
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -25,18 +27,24 @@ const LandingPage = () => {
 
     return (
         <main>
+            <TitleSEO
+                title="Mejoravit | Precalifica Ahora"
+                description="En Mejoravit solicita tu Crédito Mejoravit y recibe hasta $162,000 en efectivo, Rápido, fácil y con cobertura a nivel nacional. ¡Solicítalo en línea hoy!"
+                canonical="https://creditosoloparati.com.mx/"
+            />
+
             <SectionLp1 />
 
             <section id="registro">
                 <SectionLp2 />
             </section>
 
-            <section id="beneficios">
-                <SectionLp3 />
+            <section id="aplicacion">
+                <SectionLp4 />
             </section>
 
-            <section id="utilidad">
-                <SectionLp4 />
+            <section id="beneficios">
+                <SectionLp3 />
             </section>
 
             <SectionLp5 />

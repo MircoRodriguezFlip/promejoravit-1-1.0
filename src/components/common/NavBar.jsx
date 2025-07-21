@@ -15,25 +15,34 @@ export const NavBar = () => {
         e.preventDefault();
         setActiveLink(item.id);
 
-        if (location.pathname === '/') {
-            if (item.to === '/') {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth',
-                });
-                return;
+        // ———————— “Inicio” ————————
+        if (item.to === '/') {
+            if (location.pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                navigate('/');
             }
-
-            const targetElement = document.querySelector(item.to);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth',
-                });
-            }
-        } else {
-            navigate(`/${item.to}`);
+            return;
         }
+
+        // ————— Anclas dentro de landing —————
+        if (item.to.startsWith('#')) {
+            if (location.pathname === '/') {
+                const targetEl = document.querySelector(item.to);
+                if (targetEl) {
+                    window.scrollTo({
+                        top: targetEl.offsetTop - 80,
+                        behavior: 'smooth',
+                    });
+                }
+            } else {
+                navigate(`/${item.to}`);
+            }
+            return;
+        }
+
+        // ————— Rutas completas —————
+        navigate(item.to);
     };
 
     const handleLogoClick = (e) => {

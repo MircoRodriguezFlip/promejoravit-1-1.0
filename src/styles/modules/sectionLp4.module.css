@@ -1,11 +1,13 @@
 .sectionContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    background-color: var(--tertiary-color);
+    background-color: var(--background-color-3);
     min-height: calc(100dvh - 80px);
     padding: 20px;
+    z-index: 2;
 }
 
 .primerContenido {
@@ -24,7 +26,7 @@
 }
 
 .preguntas h2 {
-    color: var(--text-color-2);
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 25px;
 }

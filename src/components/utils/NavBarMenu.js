@@ -8,18 +8,18 @@ export const navLinks = [
         dataLink: 'navbar-registro-link',
     },
     {
+        id: 'aplicacion',
+        to: '#aplicacion',
+        label: 'Aplicación',
+        title: 'Que puedo hacer con mi crédito Mejoravit',
+        dataLink: 'navbar-utilidad-link',
+    },
+    {
         id: 'beneficios',
         to: '#beneficios',
         label: 'Beneficios',
         title: 'Beneficios de tu crédito Mejoravit',
         dataLink: 'navbar-beneficios-link',
-    },
-    {
-        id: 'utilidad',
-        to: '#utilidad',
-        label: '¿Para qué sirve?',
-        title: 'Que puedo hacer con mi crédito Mejoravit',
-        dataLink: 'navbar-utilidad-link',
     },
     {
         id: 'faq',
