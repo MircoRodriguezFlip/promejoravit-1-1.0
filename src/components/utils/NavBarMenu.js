@@ -12,7 +12,7 @@ export const navLinks = [
         to: '#aplicacion',
         label: 'Aplicación',
         title: 'Que puedo hacer con mi crédito Mejoravit',
-        dataLink: 'navbar-utilidad-link',
+        dataLink: 'navbar-aplicacion-link',
     },
     {
         id: 'beneficios',
