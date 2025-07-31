@@ -18,3 +18,8 @@
     width: 100vw;
     overflow: hidden;
 }
+
+.spinner-icon {
+    color: var(--text-color);
+    margin-top: 10px;
+}
