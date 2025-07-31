@@ -80,6 +80,8 @@
 }
 
 .contenido1 {
+    position: relative;
+    z-index: 1;
     user-select: none;
     display: flex;
     flex-direction: column;

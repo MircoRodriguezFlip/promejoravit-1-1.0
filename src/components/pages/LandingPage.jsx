@@ -40,11 +40,11 @@ const LandingPage = () => {
             </section>
 
             <section id="aplicacion">
-                <SectionLp4 />
+                <SectionLp3 />
             </section>
 
             <section id="beneficios">
-                <SectionLp3 />
+                <SectionLp4 />
             </section>
 
             <SectionLp5 />

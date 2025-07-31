@@ -55,25 +55,29 @@ const FaqPage = () => {
             </HelmetProvider>
 
             <section className={styles.sectionContainer}>
-                <header className={styles.sectionTitulo}>
-                    <h1 className="bold-text">PREGUNTAS FRECUENTES</h1>
-                    <h2 className="light-text">MEJORAVIT</h2>
-                </header>
+                <div className="fade-in">
+                    <header className={styles.sectionTitulo}>
+                        <h1 className="bold-text">PREGUNTAS FRECUENTES</h1>
+                        <h2 className="light-text">MEJORAVIT</h2>
+                    </header>
 
-                {/* PREGUNTAS */}
+                    {/* PREGUNTAS */}
 
-                <div className={styles.sectionContenido}>
-                    {faqData.map(({ id, question, answer }) => (
-                        <div key={id}>
-                            <h3 className="bold-text">{`${id}. ${question}`}</h3>
-                            <div className="light-text">{replaceWithJSX(answer, id)}</div>
+                    <div className={styles.sectionContenido}>
+                        {faqData.map(({ id, question, answer }) => (
+                            <div key={id}>
+                                <h3 className="bold-text">{`${id}. ${question}`}</h3>
+                                <div className="light-text">{replaceWithJSX(answer, id)}</div>
 
-                            <hr />
-                        </div>
-                    ))}
+                                <hr />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <BotonNav dataCta="faq-btn" />
+                <div className="fade-in">
+                    <BotonNav dataCta="faq-btn" />
+                </div>
             </section>
         </main>
     );

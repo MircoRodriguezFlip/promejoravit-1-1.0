@@ -4,6 +4,7 @@
 @import url('../src/styles/global/cargando.css');
 @import url('../src/styles/global/botones.css');
 @import url('../src/styles/global/footer.css');
+@import url('../src/styles/global/animaciones.css');
 
 * {
     margin: 0;

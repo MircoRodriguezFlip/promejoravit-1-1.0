@@ -4,7 +4,11 @@ import img1Section from '../../assets/images/img-section-lp-5.webp';
 
 import { BotonNav } from '../utils/BotonNav';
 
+import useAnimationScroll from '../../hooks/UseAnimationScroll';
+
 export const SectionLp5 = () => {
+    const imageRef = useAnimationScroll('slide-in');
+
     return (
         <section className={styles.sectionContainer}>
             <header className={`${styles.sectionTitulo} bold-text`}>
@@ -19,7 +23,9 @@ export const SectionLp5 = () => {
 
             <div className={styles.sectionContenido}>
                 <img
+                    ref={imageRef}
                     src={img1Section}
+                    className="animacion-der"
                     alt="Ejecutiva de Mejoravit de brazos cruzados, esperando que dejes tus datos para solicitar tu crédito Mejoravit"
                     loading="lazy"
                     decoding="async"

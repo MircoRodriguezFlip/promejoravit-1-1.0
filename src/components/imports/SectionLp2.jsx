@@ -4,9 +4,11 @@ import img1Section from '../../assets/images/img-section-lp-2.webp';
 import { Form } from './Form';
 
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
+import useAnimationScroll from '../../hooks/UseAnimationScroll';
 
 export const SectionLp2 = () => {
     const shouldShowImage = useMediaQuery('(min-width: 992px)');
+    const imageRef = useAnimationScroll('slide-in');
 
     return (
         <section className={styles.sectionContainer}>
@@ -26,7 +28,9 @@ export const SectionLp2 = () => {
 
                 {shouldShowImage && (
                     <img
+                        ref={imageRef}
                         src={img1Section}
+                        className="animacion-der"
                         alt="Ejecutiva de Mejoravit invitándote a completar el formulario de precalificación"
                         loading="lazy"
                         decoding="async"
