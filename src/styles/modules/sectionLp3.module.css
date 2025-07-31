@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: center;
     background-color: var(--tertiary-color);
-    min-height: calc((var(--real-vh, 1vh) * 100) - 80px);
     padding: 20px;
     z-index: 2;
 }
@@ -127,6 +126,10 @@
 }
 
 @media (min-width: 1200px) {
+    .sectionContainer {
+        min-height: calc(100dvh - 80px);
+    }
+
     .sectionTitulo h2 {
         font-size: 52px;
     }

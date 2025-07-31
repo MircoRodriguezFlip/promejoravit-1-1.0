@@ -1,8 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { RealVh } from './components/utils/RealVh';
-
 import { NavBar } from './components/common/NavBar';
 import { Cargando } from './components/utils/Cargando';
 import { Footer } from './components/common/Footer';
@@ -15,8 +13,6 @@ const FaqPage = lazy(() => import('./components/pages/FaqPage'));
 function App() {
     return (
         <BrowserRouter>
-            <RealVh />
-
             <ScrollToTop />
 
             <NavBar />
