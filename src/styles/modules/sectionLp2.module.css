@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--tertiary-color);
-    min-height: calc(100dvh - 80px);
+    min-height: calc((var(--real-vh, 1vh) * 100) - 80px);
     padding: 20px 0;
 }
 
