@@ -1,10 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 
 export const useForm = (initialState, submitCallback) => {
     const [formData, setFormData] = useState(initialState);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
+    const [utmParams, setUtmParams] = useState({});
+
+    useEffect(() => {
+        const DAYS_TO_EXPIRE = 15;
+        const MS_IN_ONE_DAY = 1000 * 60 * 60 * 24;
+        const now = Date.now();
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source') || '';
+        const utmMedium = urlParams.get('utm_medium') || '';
+        const utmCampaign = urlParams.get('utm_campaign') || '';
+
+        const storedData = localStorage.getItem('utmParams');
+
+        if (utmSource || utmMedium || utmCampaign) {
+            // Nuevos UTM encontrados → guardar en localStorage con timestamp
+            const newParams = { utmSource, utmMedium, utmCampaign, timestamp: now };
+            localStorage.setItem('utmParams', JSON.stringify(newParams));
+            setUtmParams(newParams);
+        } else if (storedData) {
+            // No hay en URL → recuperar de localStorage
+            const parsedData = JSON.parse(storedData);
+            const ageInDays = (now - parsedData.timestamp) / MS_IN_ONE_DAY;
+
+            if (ageInDays <= DAYS_TO_EXPIRE) {
+                setUtmParams(parsedData);
+            } else {
+                // Expirado → eliminar
+                localStorage.removeItem('utmParams');
+            }
+        }
+    }, []);
 
     const showAlert = (title, message, icon, color) => {
         Swal.fire({
@@ -88,11 +120,14 @@ export const useForm = (initialState, submitCallback) => {
         setLoading(true);
 
         try {
+            const utmWithoutTimestamp = (({ timestamp, ...rest }) => rest)(utmParams);
+
             const formDataToSend = {
                 nombre: formData.nombre,
                 telefono: formData.telefono,
                 email: formData.email,
                 estado: formData.estado,
+                ...utmWithoutTimestamp,
             };
 
             const response = await fetch('/backend/submit.php', {
